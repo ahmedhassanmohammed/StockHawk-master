@@ -20,7 +20,7 @@ public class StockWidgetProvider extends AppWidgetProvider {
                                 int appWidgetId) {
 
         CharSequence widgetText = context.getString(R.string.appwidget_text);
-        // Construct the RemoteViews object
+        // RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_stock_listview);
 
 
@@ -44,11 +44,11 @@ public class StockWidgetProvider extends AppWidgetProvider {
             Intent intent = new Intent(context, ListWidgetService.class);
             //passing app widget id to that RemoteViews Service
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetIds[i]);
-            //setting a unique Uri to the intent
+            // Uri to the intent
             intent.setData(Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME)));
-            //setting adapter to listview of the widget
+            // adapter to listview of the widget
             remoteViews.setRemoteAdapter(appWidgetIds[i], R.id.widget_listView, intent);
-            //setting an empty view in case of no data
+            // empty view in case of no data
             remoteViews.setEmptyView(R.id.widget_listView, R.id.empty_view);
 
             Intent intent2 = new Intent(context, GraphStock.class);
@@ -62,19 +62,6 @@ public class StockWidgetProvider extends AppWidgetProvider {
         }
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
-//
-//    private RemoteViews updateWidgetListView(Context context, int appWidgetId) {
-//
-//    }
 
-//    @Override
-//    public void onEnabled(Context context) {
-//        // Enter relevant functionality for when the first widget is created
-//    }
-//
-//    @Override
-//    public void onDisabled(Context context) {
-//        // Enter relevant functionality for when the last widget is disabled
-//    }
 }
 
