@@ -24,7 +24,7 @@ public class StockWidgetProvider extends AppWidgetProvider {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_stock_listview);
 
 
-     //   views.setOnClickPendingIntent(R.id.widget_stock_image, pendingIntent);
+
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
@@ -35,7 +35,6 @@ public class StockWidgetProvider extends AppWidgetProvider {
 
         final int N = appWidgetIds.length;
         for (int i = 0; i < N; ++i) {
-         //   RemoteViews remoteViews = updateWidgetListView(context, appWidgetIds[i]);
 
             //which layout to show on widget
             RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_stock_listview);
@@ -62,19 +61,6 @@ public class StockWidgetProvider extends AppWidgetProvider {
         }
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
-//
-//    private RemoteViews updateWidgetListView(Context context, int appWidgetId) {
-//
-//    }
 
-//    @Override
-//    public void onEnabled(Context context) {
-//        // Enter relevant functionality for when the first widget is created
-//    }
-//
-//    @Override
-//    public void onDisabled(Context context) {
-//        // Enter relevant functionality for when the last widget is disabled
-//    }
 }
 
