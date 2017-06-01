@@ -7,7 +7,9 @@
     android:orientation="horizontal"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:id="@+id/list_item">
+    android:id="@+id/list_item"
+    android:contentDescription="@string/goto_graph"
+    >
 
     <TextView
         android:id="@+id/symbol"

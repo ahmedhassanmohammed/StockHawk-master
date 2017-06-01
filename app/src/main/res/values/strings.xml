@@ -39,6 +39,7 @@
 
     <!--my Strings-->
     <string name="stock_not_found">"This Stock doesn't Exist"</string>
+    <string name="goto_graph">"click to see the history"</string>
     <string name="error_fetching">Error fetching stock quotes</string>
     <string name="Scheduling_a_periodic_task" translatable="false">Scheduling a periodic task</string>
     <string name="add_Stock">"add Stock"</string>
